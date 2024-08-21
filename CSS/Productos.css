@@ -1,0 +1,310 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #ffffff;
+    padding: 20px 0;
+  }
+  
+  .contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    flex: 0 0 200px; /* Ajustar el ancho del logo según sea necesario */
+  }
+  
+  .logo img {
+    margin-left: 25px;
+    height: 90px;
+
+  }
+  
+  .menu {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .menu li:hover::after { /* Pseudo-elemento "after" para la línea naranja */
+    content: ""; /* Contenido vacío para que la línea no tenga texto */
+    display: block; /* Convertir el pseudo-elemento en un bloque */
+    width: 100%; /* Ancho completo del elemento del menú */
+    height: 3px; /* Altura de la línea */
+    background-color: orange; /* Color naranja */
+    margin-top: 5px; /* Margen superior para separar la línea del texto */
+    transition: width 0.3s ease; /* Animación suave para el cambio de ancho */
+  }
+  
+
+  .menu li:hover a { /* Aplicar estilos al texto dentro del elemento del menú al pasar el cursor */
+    font-size: 1.2em; /* Aumentar el tamaño del texto en un 20% */
+    transition: font-size 1s ease; /* Animación suave para el cambio de tamaño */
+  }
+  
+  .elementos-izquierda {
+    flex: 0 0 auto;
+    text-align: left;
+  }
+  
+  .elementos-izquierda a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+  }
+  
+  .elementos-izquierda input[type="text"] {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+  }
+
+  .elementos-izquierda button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-container {
+    position: relative; /* Establish positioning context */
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Align items vertically in the center */
+    width: 100%; /* Make the container take full width */
+  }
+  
+  /* Main navigation styles */
+  #main-nav {
+    position: absolute; /* Position relative to parent */
+    top: 0; /* Top position */
+    right: 0; /* Right position */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%; /* Adjust width as needed */
+    z-index: 1; /* Ensure navigation is on top of other elements */
+  }
+  
+  /* Navigation links */
+  #main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #main-nav li {
+    display: inline-block;
+    margin-left: 20px; /* Add spacing between links */
+  }
+  
+  #main-nav li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+  
+
+
+  #main-nav li:hover::after { /* Pseudo-elemento "after" para la línea naranja */
+    content: ""; /* Contenido vacío para que la línea no tenga texto */
+    display: block; /* Convertir el pseudo-elemento en un bloque */
+    width: 100%; /* Ancho completo del elemento del menú */
+    height: 3px; /* Altura de la línea */
+    background-color: orange; /* Color naranja */
+    margin-top: 5px; /* Margen superior para separar la línea del texto */
+    transition: width 0.3s ease; /* Animación suave para el cambio de ancho */
+  }
+ #main li:hover a { /* Aplicar estilos al texto dentro del elemento del menú al pasar el cursor */
+    font-size: 1.2em; /* Aumentar el tamaño del texto en un 20% */
+    transition: font-size 1s ease; /* Animación suave para el cambio de tamaño */
+  }
+
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px ;
+    text-align: center; /* Centra el encabezado */
+  }
+  
+ .encabezado{
+    margin-top: 50px;
+    padding: 10px;
+    text-align: center;
+ }
+    
+ 
+  .product-card {
+    width: 18%; /* Ajusta el ancho según la cantidad de productos por fila */
+    margin: 30px ;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  .product-card {
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+    
+  .ofertas-seccion {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .ofertas-seccion h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* Carousel container styles */
+  .carousel-contenedor {
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflowing carousel items */
+  }
+  
+  /* Carousel styles */
+  .carousel {
+    display: flex; /* Arrange items horizontally */
+    transition: transform 0.5s ease; /* Add a smooth transition for scrolling */
+  }
+  
+  /* Product item styles */
+  .producto {
+    flex: 0 0 300px; /* Set width of each product item */
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    position: relative; /* For positioning image overlay */
+    transition: transform 0.3s ease; /* Add a smooth transition for hover effect */
+  }
+  
+  .producto img {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover; /* Cover the entire product area */
+  }
+  
+  .producto h3 {
+    margin-top: 10px;
+  }
+  
+  .producto p {
+    margin-bottom: 0;
+  }
+  
+  /* Hover effect */
+  .producto:hover {
+    transform: scale(1.05); /* Enlarge the image on hover by 5% */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    /* Remove the background color and opacity from the previous hover effect */
+  }
+  
+  .producto h3 {
+    margin-top: 10px;
+  }
+  
+  .producto p {
+    margin-bottom: 0;
+  }
+  
+  /* Image overlay on hover */
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s;
+  }
+  
+  /* Navigation buttons */
+  .prev-btn,
+  .next-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 20px 10px;
+    border-radius: 5px;
+  }
+  
+  .prev-btn:hover,
+  .next-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .producto {
+      flex: 0 0 50%; /* Adjust width for smaller screens */
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  
+  .social-media li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  

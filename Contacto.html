@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="CSS/Contacto.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+
+
+
+    
+    <div class="container">
+        <img src="IMG/file.png" alt="Logo de la Empresa" class="logo"> <!-- Cambia este enlace al logo de tu empresa -->
+        <h2>Formulario de Contacto</h2>
+        <div class="error-message" id="contact-error">Por favor, completa todos los campos.</div>
+        <input type="text" id="contact-name" placeholder="Nombre" required>
+        <input type="email" id="contact-email" placeholder="Correo electrónico" required>
+        <input type="tel" id="contact-phone" placeholder="Teléfono" required>
+        <textarea id="contact-message" placeholder="Mensaje" required></textarea>
+        <button onclick="submitContactForm()">Enviar</button>
+    </div>
+
+    <script src="JS/Contacto.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="CSS/Inicia.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container" id="register-container">
+    <img src="IMG/file.png" alt="Logo de la Empresa" class="logo"> <!-- Cambia este enlace al logo de tu empresa -->
+    <h2>Registro de Usuario</h2>
+    <div class="error-message" id="register-error">Datos incorrectos, por favor revisa.</div>
+    <input type="text" id="register-username" placeholder="Nombre de usuario" required>
+    <input type="email" id="register-email" placeholder="Correo electrónico" required>
+    <input type="password" id="register-password" placeholder="Contraseña" required>
+    <button onclick="register()">Registrarse</button>
+    <div class="login-link" onclick="showLoginForm()">¿Ya tienes una cuenta? Inicia sesión</div>
+</div>
+
+<div class="container" id="login-container" style="display:none;">
+    <img src="IMG/file.png" alt="Logo de la Empresa" class="logo"> <!-- Cambia este enlace al logo de tu empresa -->
+    <h2>Iniciar Sesión</h2>
+    <div class="error-message" id="login-error">Credenciales incorrectas.</div>
+    <input type="text" id="login-username" placeholder="Nombre de usuario" required>
+    <input type="password" id="login-password" placeholder="Contraseña" required>
+    <button onclick="login()">Iniciar Sesión</button>
+    <div class="login-link" onclick="showRegisterForm()">Regístrate</div>
+</div>
+     
+
+      <script src="JS/Inicia.js"></script>
+</body>
+</html>

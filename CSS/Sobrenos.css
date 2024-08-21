@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #ffffff;
+    padding: 20px 0;
+  }
+  
+  .contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    flex: 0 0 200px; /* Ajustar el ancho del logo según sea necesario */
+  }
+  
+  .logo img {
+    margin-left: 25px;
+    height: 90px;
+
+  }
+  
+  .menu {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .menu li:hover::after { /* Pseudo-elemento "after" para la línea naranja */
+    content: ""; /* Contenido vacío para que la línea no tenga texto */
+    display: block; /* Convertir el pseudo-elemento en un bloque */
+    width: 100%; /* Ancho completo del elemento del menú */
+    height: 3px; /* Altura de la línea */
+    background-color: orange; /* Color naranja */
+    margin-top: 5px; /* Margen superior para separar la línea del texto */
+    transition: width 0.3s ease; /* Animación suave para el cambio de ancho */
+  }
+  
+
+  .menu li:hover a { /* Aplicar estilos al texto dentro del elemento del menú al pasar el cursor */
+    font-size: 1.2em; /* Aumentar el tamaño del texto en un 20% */
+    transition: font-size 1s ease; /* Animación suave para el cambio de tamaño */
+  }
+  
+  .elementos-izquierda {
+    flex: 0 0 auto;
+    text-align: left;
+  }
+  
+  .elementos-izquierda a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+  }
+  
+  .elementos-izquierda input[type="text"] {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+  }
+
+  .elementos-izquierda button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-container {
+    position: relative; /* Establish positioning context */
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Align items vertically in the center */
+    width: 100%; /* Make the container take full width */
+  }
+  
+  /* Main navigation styles */
+  #main-nav {
+    position: absolute; /* Position relative to parent */
+    top: 0; /* Top position */
+    right: 0; /* Right position */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%; /* Adjust width as needed */
+    z-index: 1; /* Ensure navigation is on top of other elements */
+  }
+  
+  /* Navigation links */
+  #main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #main-nav li {
+    display: inline-block;
+    margin-left: 20px; /* Add spacing between links */
+  }
+  
+  #main-nav li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+  
+
+
+  #main-nav li:hover::after { /* Pseudo-elemento "after" para la línea naranja */
+    content: ""; /* Contenido vacío para que la línea no tenga texto */
+    display: block; /* Convertir el pseudo-elemento en un bloque */
+    width: 100%; /* Ancho completo del elemento del menú */
+    height: 3px; /* Altura de la línea */
+    background-color: orange; /* Color naranja */
+    margin-top: 5px; /* Margen superior para separar la línea del texto */
+    transition: width 0.3s ease; /* Animación suave para el cambio de ancho */
+  }
+ #main li:hover a { /* Aplicar estilos al texto dentro del elemento del menú al pasar el cursor */
+    font-size: 1.2em; /* Aumentar el tamaño del texto en un 20% */
+    transition: font-size 1s ease; /* Animación suave para el cambio de tamaño */
+  }
+
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  .relleno{
+    padding: 50px;
+  }
+  
+  .social-media li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+
+  .sobre-nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .contenedor-sobre-nosotros,
+  .contenedor-mision-vision,
+  .contenedor-compromiso {
+    width: 70%;
+    margin: 40px;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .contenedor-compromiso img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
